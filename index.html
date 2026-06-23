@@ -1,0 +1,385 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HELLO | 3D Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a16',
+                        neonPurple: '#8b5cf6',
+                        neonBlue: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0a0a16;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Class */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* 3D Canvas Background Container */
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="text-white font-sans selection:bg-neonPurple">
+
+    <div id="canvas-container"></div>
+
+    <nav
+        class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-darkBg/60 border-b border-white/10 px-6 md:px-16 py-4 flex justify-between items-center">
+        <h1
+            class="text-xl md:text-2xl font-bold tracking-wider bg-gradient-to-r from-neonBlue to-neonPurple bg-clip-text text-transparent">
+            PORTFOLIO
+        </h1>
+        <div class="flex gap-4 md:gap-8 text-xs md:text-sm font-semibold text-gray-300">
+            <a href="#home" class="hover:text-neonBlue transition-colors">Home</a>
+            <a href="#about" class="hover:text-neonBlue transition-colors">About</a>
+            <a href="#skills" class="hover:text-neonBlue transition-colors">Skills</a>
+            <a href="#projects" class="hover:text-neonBlue transition-colors">Projects</a>
+            <a href="#contact" class="hover:text-neonBlue transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home"
+        class="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-24 pt-28 md:pt-0 gap-12 max-w-7xl mx-auto">
+        <div class="max-w-xl space-y-5 text-center md:text-left">
+            <span class="text-neonBlue uppercase font-mono tracking-widest block text-sm">Hello</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                I'm <span class="bg-gradient-to-r from-neonBlue to-neonPurple bg-clip-text text-transparent">ASIFA
+                    MAZHAR</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-white">
+                <span class="text-neonBlue">WEB DEVELOPER</span>
+            </h2>
+            <p class="text-gray-400 text-base md:text-lg leading-relaxed">
+                I build modern, responsive and user-friendly websites with creative UI/UX design. I make websites, apps,
+                & marketing content with love.
+            </p>
+            <div class="flex gap-4 pt-4 justify-center md:justify-start">
+                <a href="#projects"
+                    class="px-6 py-3 bg-neonPurple rounded-full font-bold hover:shadow-[0_0_15px_#8b5cf6] transition-all transform hover:-translate-y-1">View
+                    Projects</a>
+                <a href="#contact"
+                    class="px-6 py-3 border border-neonBlue rounded-full font-bold hover:bg-neonBlue/10 transition-all transform hover:-translate-y-1">Contact
+                    Me</a>
+            </div>
+        </div>
+
+        <div
+            class="w-72 h-[380px] border border-white/10 rounded-2xl shadow-2xl overflow-hidden relative group transition-transform duration-500 hover:scale-105">
+            <img src="pic.jpeg" alt="Asifa Mazhar" class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-neonPurple/20 to-neonBlue/20 flex flex-col items-center justify-center p-6 text-center hidden">
+                <i class="fa-solid fa-user-tie text-5xl text-neonBlue mb-4 animate-bounce"></i>
+                <span class="text-gray-300 font-medium">[ Place Your Image Here ]</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-28 px-6 md:px-24 max-w-5xl mx-auto text-center scroll-mt-16">
+        <h2
+            class="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-neonBlue to-neonPurple bg-clip-text text-transparent">
+            About Me</h2>
+        <div class="glass-card p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-neonBlue to-neonPurple"></div>
+            <p class="text-lg md:text-xl text-gray-300 leading-loose text-justify md:text-center">
+                I am a passionate web developer who has completed full web development training. I specialize in
+                building modern, responsive and visually appealing websites. I also have strong UI/UX design skills and
+                love creating smooth and interactive user experiences. My goal is to build professional and creative web
+                solutions.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="py-28 px-6 md:px-24 max-w-6xl mx-auto scroll-mt-16">
+        <h2
+            class="text-3xl md:text-4xl font-bold mb-4 text-center bg-gradient-to-r from-neonBlue to-neonPurple bg-clip-text text-transparent">
+            My Tech Stack</h2>
+        <p class="text-center text-gray-400 mb-12">Skills and technologies I work with to craft amazing web designs.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+                class="p-6 glass-card rounded-2xl flex items-center gap-4 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] hover:-translate-y-1 transition-all duration-300">
+                <div
+                    class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 text-3xl">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-lg">HTML5</h4>
+                    <div class="w-full bg-gray-800 h-2 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full"
+                            style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-6 glass-card rounded-2xl flex items-center gap-4 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] hover:-translate-y-1 transition-all duration-300">
+                <div
+                    class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 text-3xl">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-lg">CSS3</h4>
+                    <div class="w-full bg-gray-800 h-2 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-blue-500 to-neonBlue rounded-full" style="width: 90%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-6 glass-card rounded-2xl flex items-center gap-4 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] hover:-translate-y-1 transition-all duration-300">
+                <div
+                    class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center text-yellow-500 text-3xl">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-lg">JavaScript</h4>
+                    <div class="w-full bg-gray-800 h-2 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-yellow-500 to-amber-400 rounded-full"
+                            style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-6 glass-card rounded-2xl flex items-center gap-4 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] hover:-translate-y-1 transition-all duration-300">
+                <div
+                    class="w-12 h-12 rounded-xl bg-purple-600/10 flex items-center justify-center text-purple-500 text-3xl">
+                    <i class="fa-brands fa-bootstrap"></i>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-lg">Bootstrap</h4>
+                    <div class="w-full bg-gray-800 h-2 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-purple-600 to-neonPurple rounded-full"
+                            style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-6 glass-card rounded-2xl flex items-center gap-4 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] hover:-translate-y-1 transition-all duration-300">
+                <div
+                    class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400 text-3xl">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-lg">Responsive Design</h4>
+                    <div class="w-full bg-gray-800 h-2 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-teal-400 to-emerald-400 rounded-full"
+                            style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-6 glass-card rounded-2xl flex items-center gap-4 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] hover:-translate-y-1 transition-all duration-300">
+                <div
+                    class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-500 text-3xl">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-lg">UI/UX Design</h4>
+                    <div class="w-full bg-gray-800 h-2 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-pink-500 to-rose-400 rounded-full" style="width: 85%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-28 px-6 md:px-24 max-w-6xl mx-auto scroll-mt-16">
+        <h2
+            class="text-3xl md:text-4xl font-bold mb-4 text-center bg-gradient-to-r from-neonBlue to-neonPurple bg-clip-text text-transparent">
+            Recent Works</h2>
+        <p class="text-center text-gray-400 mb-12">A showcase of the recent creative web layouts and apps.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+                class="p-6 glass-card rounded-2xl flex flex-col hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-[1.02] transition-all duration-300 group">
+                <div
+                    class="w-full h-48 bg-neutral-950 rounded-xl mb-4 overflow-hidden relative border border-white/5 flex items-center justify-center">
+                    <img src="ba.jpg" alt="Cupcake Website" class="w-full h-full object-cover"
+                        onerror="this.src='img.jpg'">
+                </div>
+                <div class="flex items-center gap-3 mb-2">
+                    <i
+                        class="fa-solid fa-cake-candles text-2xl text-pink-500 opacity-80 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-bold text-neonBlue">Cupcake Website</h3>
+                </div>
+                <p class="text-gray-400">A sweet, beautiful, and fully responsive e-commerce landing page crafted for
+                    confectionery stores with rich custom UI cards.</p>
+            </div>
+
+            <div
+                class="p-6 glass-card rounded-2xl flex flex-col hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-[1.02] transition-all duration-300 group">
+                <div
+                    class="w-full h-48 bg-neutral-950 rounded-xl mb-4 overflow-hidden relative border border-white/5 flex items-center justify-center">
+                    <img src="picc.jpg" alt="portfolio website" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center gap-3 mb-2">
+                    <i
+                        class="fa-solid fa-user-tie text-2xl text-neonBlue opacity-80 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-bold text-neonBlue">Portfolio Website</h3>
+                </div>
+                <p class="text-gray-400">A high-tech, modern interactive 3D portfolio project utilizing glassmorphism
+                    blocks and customized neon highlights.</p>
+            </div>
+
+            <div
+                class="p-6 glass-card rounded-2xl flex flex-col hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-[1.02] transition-all duration-300 group">
+                <div
+                    class="w-full h-48 bg-neutral-950 rounded-xl mb-4 overflow-hidden relative border border-white/5 flex items-center justify-center">
+                    <img src="nn.jpg" alt="Calculator App"Class="w-full h=full object-cover">
+                </div>
+                <div class="flex items-center gap-3 mb-2">
+                    <h3 class="text-2xl font-bold text-neonBlue">Calculator App</h3>
+                </div>
+                <p class="text-gray-400">A clean and simple web application interface designed with modern web grid
+                    structures and smooth dark aesthetics.</p>
+            </div>
+
+            <div
+                class="p-6 glass-card rounded-2xl flex flex-col hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-[1.02] transition-all duration-300 group">
+                <div
+                    class="w-full h-48 bg-neutral-950 rounded-xl mb-4 overflow-hidden relative border border-white/5 flex items-center justify-center">
+                    <img src="web.jpg" alt="Calculator App" Class="w-full h=full object-cover">
+                </div>
+                <div class="flex items-center gap-3 mb-2">
+                    <h3 class="text-2xl font-bold text-neonBlue">Landing Page Design</h3>
+                </div>
+                <p class="text-gray-400">High-converting sleek business landing layout structure focusing on
+                    fast-loading performance and elegant grid layout blocks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-28 px-6 md:px-24 max-w-3xl mx-auto scroll-mt-16">
+        <h2
+            class="text-3xl md:text-4xl font-bold mb-4 text-center bg-gradient-to-r from-neonBlue to-neonPurple bg-clip-text text-transparent">
+            Get In Touch</h2>
+        <p class="text-center text-gray-400 mb-12">Have a project or opportunity? Send a message directly.</p>
+
+        <form class="space-y-6 glass-card p-6 md:p-10 rounded-3xl shadow-2xl"
+            onsubmit="event.preventDefault(); alert('Message Sent Successfully!');">
+            <div>
+                <label class="block text-sm font-mono text-gray-400 mb-2">Name</label>
+                <input type="text"
+                    class="w-full bg-darkBg/60 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-neonBlue transition-colors"
+                    placeholder="Your Name" required>
+            </div>
+            <div>
+                <label class="block text-sm font-mono text-gray-400 mb-2">Email</label>
+                <input type="email"
+                    class="w-full bg-darkBg/60 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-neonBlue transition-colors"
+                    placeholder="your@email.com" required>
+            </div>
+            <div>
+                <label class="block text-sm font-mono text-gray-400 mb-2">Message</label>
+                <textarea
+                    class="w-full bg-darkBg/60 border border-white/10 rounded-xl px-4 py-4 text-white h-36 focus:outline-none focus:border-neonBlue transition-colors resize-none"
+                    placeholder="Your beautiful idea..." required></textarea>
+            </div>
+            <button type="submit"
+                class="w-full py-4 bg-gradient-to-r from-neonBlue to-neonPurple rounded-xl font-bold tracking-wider hover:opacity-90 transition-opacity shadow-lg">
+                Send Message
+            </button>
+        </form>
+
+        <div class="mt-12 flex justify-center gap-10 text-3xl text-gray-400">
+            <a href="#" class="hover:text-white transition-colors" title="GitHub"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="#" class="hover:text-neonBlue transition-colors" title="LinkedIn"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="#" target="_blank" class="hover:text-emerald-500 transition-colors" title="WhatsApp"><i
+                    class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-sm font-mono text-gray-500 border-t border-white/5">
+        &copy; 2026 Asifa Mazhar. Built with ❤️ and Code.
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // --- THREE.JS 3D BACKGROUND SYSTEM ---
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.derElement || renderer.domElement);
+
+        // 3D Wireframe Node Structure
+        const geometry = new THREE.IcosahedronGeometry(2.3, 1);
+        const material = new THREE.MeshBasicMaterial({
+            color: 0x8b5cf6,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.12
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        camera.position.z = 5;
+
+        // Mouse Move Track
+        let mouseX = 0, mouseY = 0;
+        window.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX - window.innerWidth / 2) * 0.0004;
+            mouseY = (e.clientY - window.innerHeight / 2) * 0.0004;
+        });
+
+        // Animation Frame Loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            mesh.rotation.x += 0.002;
+            mesh.rotation.y += 0.004;
+
+            // Parallax movement interpolation
+            mesh.position.x += (mouseX - mesh.position.x) * 0.05;
+            mesh.position.y += (-mouseY - mesh.position.y) * 0.05;
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Responsive Screen Resizer
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+
+</html>
